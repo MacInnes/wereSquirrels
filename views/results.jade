@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1 Results:
+  h4 Winner: #{output.winner}
+  table
+    tr
+      th Team name:
+      th Squirrel name:
+      th Meat Collected:
+      th Garlic Collected:
+    each team in output.squirrels
+      each squirrel in team
+        tr
+          td #{squirrel.team}
+          td #{squirrel.name}
+          td #{squirrel.meatRate}
+          td #{squirrel.garlicRate}
+
+
+    //- -for (var i = 0; i < output.squirrels.length; i++){
+    //-   -for (var j = 0; j < output.squirrels[i].length; i++){
+    //-     tr
+    //-       td #{output.team1}
+    //-       td #{output.squirrels[i][j].name}
+    //-       td #{output.squirrels[i][j].meatRate}
+    //-       td #{output.squirrels[i][j].garlicRate}
+    //-   -}
+    //- -}

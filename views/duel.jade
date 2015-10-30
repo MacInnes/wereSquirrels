@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  if error
+    h4(id='error') #{error}
+  form(action='/duel' method='post')
+    select(id='team1' name='team1')
+      each colony in colonies
+        option(value= colony.name) #{colony.name}
+    select(id='team2' name='team2')
+      each colony in colonies
+        option(value= colony.name) #{colony.name}
+    button(type='submit') Start the Duel!

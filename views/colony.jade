@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 #{colony}
+  h4 Weresquirrels:
+  table
+    tr
+      th Weresquirrel name:
+      th Meat Collection rate:
+      th Garlic Collection rate:
+      th Total Meat from Duels:
+      th Total Garlic from Duels:
+    each squirrel in totals
+      tr
+        td #{squirrel.name}
+        td #{squirrel.meat}
+        td #{squirrel.garlic}
+        td #{squirrel.meatTotal}
+        td #{squirrel.garlicTotal}
+  h4 Unibears:
+  each bear in bears
+    p #{bear.name}

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 WERESQUIRRELS AND UNIBEARS
+  img(src='http://orig06.deviantart.net/cc32/f/2009/120/9/0/were_squirrel_by_charlielou107.jpg')
+  img(src='http://warptubes.com/wp-content/uploads/2008/11/2008-11-22-unibear.jpg')
+  div  
+    a(href='/duel') Create a Duel
+
+  h1 Colonies:
+
+  each colony in colonies
+    a(href='/colonies/' + colony._id)
+      h1 #{colony.name}
+    p Total wins: #{colony.wins}
+
